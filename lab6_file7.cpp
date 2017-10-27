@@ -1,5 +1,11 @@
 #include <iostream>
 using namespace std;
+char strCPY (char str1[40], char str2[40])
+{
+  for (int i = 0; str1[i]!=0; i++){
+  str2[i] = str1[i];}
+  return str2[40];
+}
 int Strlen(char ch[])
 {
    int i;
@@ -35,9 +41,12 @@ int Strcmp(char st1[], char st2[])
 int main()
 {
   cout<<"Program to Implement snippets for the following functions: \n Strcpy\n Strcat\n Strlen\n Strcmp";
-  char str1[20], str2[20];
+  char str1[20], str2[20], str3[20];
   cout<<"\nEnter the first String: ";
   cin>>str1;
+  strCPY(str1,str3);
+  cout << "original string: " << str1 << endl;
+  cout << "copied string: " << str3 << endl;
   cout<<"\nEnter the second String: ";
   cin>>str2;
   int flag=Strcmp(str1,str2);
